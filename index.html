@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Поиск на странице</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+  </head>
+  <body>
+    <h2>
+      Пример поиска на странице с подсветкой при помощи стороней библиотеки
+      <a href="https://markjs.io/" target="_blank">Mark.js</a>
+    </h2>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Поиск</div>
+      <div class="panel-body">
+        <div class="search row">
+          <div class="col-xs-6">
+            <input
+              type="text"
+              name="keyword"
+              class="form-control input-sm"
+              placeholder="Введите фразу для поиска"
+            />
+          </div>
+          <div class="col-xs-6">
+            <span>опции поиска</span>
+            <input
+              type="checkbox"
+              name="opt[]"
+              value="separateWordSearch"
+              checked
+            />
+            отдельный поиск слова
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body context">
+        <p>
+            Почему использование функции самозащитой подсветки - это плохая идея
+            Причина, по которой, вероятно, плохая идея начать создавать собственную функцию подсветки с нуля, состоит в том, что вы наверняка столкнетесь с проблемами, которые другие уже решили. Задачи:
+
+            Вам нужно будет удалить текстовые узлы с элементами HTML, чтобы выделить ваши совпадения, не разрушая события DOM и запуская регенерацию DOM снова и снова (что было бы, например, с помощью innerHTML)
+            Если вы хотите удалить выделенные элементы, вам нужно будет удалить элементы HTML с их содержимым, а также объединить разделенные текстовые узлы для дальнейшего поиска. Это необходимо, потому что каждый плагин highlighter ищет внутри текстовых узлов для совпадений, и если ваши ключевые слова будут разделены на несколько текстовых узлов, они не будут найдены.
+            Вам также нужно будет создать тесты, чтобы убедиться, что ваш плагин работает в ситуациях, о которых вы не думали. И я говорю о кросс-браузерных тестах.
+            Звучит сложно? Если вам нужны некоторые функции, такие как игнорирование некоторых элементов выделения, диакритическое отображение, сопоставление синонимов, поиск внутри iframe, разделенный поиск по словам и т.д., Это становится все более сложным.
+        </p>
+      </div>
+    </div>
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <SCRIPT src="js/mark.min.js"></SCRIPT>
+  <script src="js/index.js"></script>
+  </body>
+</html>
